@@ -1,0 +1,47 @@
+<!-- Acabei tendo problemas com a conexão do boostrap com o codigo em html, não estava funcionando como no HTML sem o
+Angular, mas deixo o esboço para a avaliação -->
+
+  <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <img src="images/logo.svg" alt="Logo da Google" class="logo">
+        <div class="clear"></div>
+        <div class="title-container">
+          <h1>Criar sua Conta do Google</h1>
+        </div>
+        <form (ngSubmit)="submitForm()" #cadastroForm="ngForm">
+          <div class="input-group">
+            <div class="name-inputs">
+              <input type="text" name="nome" placeholder="Nome" required [(ngModel)]="cadastro.nome">
+              <input type="text" name="sobrenome" placeholder="Sobrenome" required [(ngModel)]="cadastro.sobrenome">
+            </div>
+          </div>
+          <div class="input-group">
+            <input type="text" name="usuario" placeholder="Nome de Usuário @gmail.com" required [(ngModel)]="cadastro.usuario">
+            <p class="hint">Você pode usar letras, números e pontos finais.</p>
+          </div>
+          <h2 class="blue">Usar meu endereço de email atual em vez disso</h2>
+          <div class="input-group">
+            <div class="password-inputs">
+              <input type="password" name="senha" placeholder="Senha" required [(ngModel)]="cadastro.senha">
+              <input type="password" name="confirmacao-senha" placeholder="Confirmar" required [(ngModel)]="cadastro.confirmacaoSenha">
+            </div>
+            <p class="hint">Use oito ou mais caracteres com uma combinação de letras, números e símbolos.</p>
+          </div>
+          <p class="blue login-instead">Faça login em vez disso</p>
+          <button type="submit" class="btn btn-sm">Próxima</button>
+        </form>
+        <img src="images/image1.svg" alt="Imagem Grande" class="right-image">
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>

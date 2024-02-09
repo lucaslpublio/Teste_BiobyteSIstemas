@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="style_cadastro.css">
+ </head>
+ <body>
+   <div class="container">
+     <div class="form-container">
+        <img src="images/logo.svg" alt="Logo da Google" class="logo">
+        <div class="clear"></div>
+        <div class="title-container">
+            <h1>Criar sua Conta do Google</h1>
+        </div>
+        <form action="#" method="POST" id="cadastroForm">
+            <div class="input-group">
+                <div class="name-inputs">
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <input type="text" name="sobrenome" placeholder="Sobrenome" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" name="usuario" placeholder="Nome de Usuário                                         @gmail.com" required>
+                <p class="hint">Você pode usar letras, números e pontos finais.</p>
+            </div>
+            <h2 class="blue">Usar meu endereço de email atual em vez disso</h2>
+            <div class="input-group">
+                <div class="password-inputs">
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <input type="password" name="confirmacao-senha" placeholder="Confirmar" required>
+                </div>
+                <p class="hint">Use oito ou mais caracteres com uma combinação de letras, números e símbolos.</p>
+            </div>
+            <p class="blue login-instead">Faça login em vez disso</p>
+            <button type="submit" class="btn btn-sm">Próxima</button>
+        </form>
+        <img src="images/image1.svg" alt="Imagem Grande" class="right-image">
+    </div>
+   </div>
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   
+   
+   <!-- Script Questao 3 -->
+   <script>
+    document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        // Obtém os valores dos campos de entrada
+        var nome = document.querySelector('input[name="nome"]').value;
+        var sobrenome = document.querySelector('input[name="sobrenome"]').value;
+        var usuario = document.querySelector('input[name="usuario"]').value;
+        var senha = document.querySelector('input[name="senha"]').value;
+        var confirmacaoSenha = document.querySelector('input[name="confirmacao-senha"]').value;
+
+        // Valida se todos os campos foram preenchidos
+        if (nome === '' || sobrenome === '' || usuario === '' || senha === '' || confirmacaoSenha === '') {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        // Valida se a senha e a confirmação de senha correspondem
+        if (senha !== confirmacaoSenha) {
+            alert('A senha e a confirmação de senha não correspondem.');
+            return;
+        }
+
+        // Se todas as validações passarem, os dados podem ser enviados ao backend
+        // Aqui você pode adicionar o código para enviar os dados ao backend
+    });
+</script>
+<script src="script_cadastro.js"></script>
+</body>
+</html>

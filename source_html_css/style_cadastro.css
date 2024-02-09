@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: block;
+    width: 100px; /* ajuste conforme necessário */
+    height: auto; /* isso manterá a proporção original */
+    margin: 0 auto 20px; /* Isso centralizará a logo horizontalmente e criará um espaço na parte inferior */
+}
+
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    float: left;
+    width: 100px; /* ajuste conforme necessário */
+    height: auto; /* isso manterá a proporção original */
+}
+
+.clear {
+    clear: both;
+}
+
+.title-container {
+    text-align: right;
+}
+
+h1 {
+    text-align: left;
+    font-size: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.name-inputs {
+    display: flex;
+    width: 50%; /* Ajuste o tamanho conforme necessário */  
+}
+
+.name-inputs input {
+    width: calc(50% - 5px);
+    margin-right: 5px;
+}
+
+.hint {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.blue {
+    color: #4285f4;
+    font-size: 15px;
+}
+
+.btn {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 25%;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #357ae8;
+}
+
+.password-inputs {
+    display: flex;
+}
+
+.password-inputs input {
+    width: 22.5%; /* Ajuste o tamanho conforme necessário */
+    margin-right: 5px;
+}
+
+.input-group input[type="text"] {
+    width: 47.5%; /* Ajuste o tamanho conforme necessário */
+    margin-bottom: 10px;
+}
+
+.btn, .login-instead {
+    display: inline-block;
+}
+
+.login-instead {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 80px;
+}
+
+.right-image {
+    float: right;
+    width: 300px; /* Largura da imagem */
+    margin-top: -400px; /* Ajuste conforme necessário para alinhar com o topo do formulário */
+    margin-right: 0px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #4285f4; /* Cor azul */
+    outline: none; /* Remove a borda de contorno padrão */
+}
